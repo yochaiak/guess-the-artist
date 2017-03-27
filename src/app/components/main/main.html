@@ -1,0 +1,21 @@
+<div class="main-container">
+    <header>
+        <h1>Guess The Artist</h1>
+    </header>
+    <div class="content">
+        <section class="left">
+            <h2 ng-bind="'Round ' + mainCtrl.round"></h2>
+            <album model="mainCtrl.album"></album>
+        </section>
+        <section class="right">
+            <question data="mainCtrl.currentQuestion" on-submit="mainCtrl.nextRound(isAnswerCorrect)"></question>
+            <div class="hints-wrapper" ng-if="mainCtrl.userAttempts === 2">
+                <h2>Hint:</h2>
+                <img src="{{mainCtrl.album.artworkUrl100}}" />
+            </div>
+        </section>
+    </div>
+    <footer ng-show="mainCtrl.gameover">
+        <span ng-bind="'Your Total Score: ' + mainCtrl.totalScore"></span>
+    </footer>
+</div>

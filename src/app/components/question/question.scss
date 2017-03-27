@@ -1,0 +1,58 @@
+question {
+  display: flex;
+
+  flex-direction: column;
+
+
+  padding: 20px;
+
+  -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+
+  > h2 {
+    font-size: 1.6rem;
+  }
+
+  .answer-field {
+    display: flex;
+
+    margin-top: 20px;
+
+    button {
+      background-color: #8dee7c;
+
+      border: 0;
+      border-radius: 6px;
+
+      font-size: 16px;
+      color: #ffffff;
+
+      outline: none;
+
+      cursor: pointer;
+
+      min-width: 100px;
+
+      margin-left: 10px;
+    }
+
+    input[type="text"] {
+      outline: none;
+
+      border-radius: 6px;
+
+      flex-grow: 1;
+      font-size: 24px;
+
+      text-indent: 10px;
+
+      height: 60px;
+
+      border: 0;
+
+      border: 1px solid black;
+    }
+  }
+
+}

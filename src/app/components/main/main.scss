@@ -2,6 +2,24 @@ body {
   font-family: Arial, serif;
 }
 
+button {
+  background-color: #8dee7c;
+
+  border: 0;
+  border-radius: 6px;
+
+  font-size: 16px;
+  color: #ffffff;
+
+  outline: none;
+
+  cursor: pointer;
+
+  min-width: 100px;
+
+  margin-left: 10px;
+}
+
 main {
   display: flex;
 
@@ -41,7 +59,15 @@ main {
 
       margin-top: 10px;
 
-      span {
+      text-align: center;
+
+      padding: 10px;
+
+      > button {
+        height: 60px;
+      }
+
+      > span {
         color: #35ca00;
 
         font-size: 24px;

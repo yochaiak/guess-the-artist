@@ -2,7 +2,7 @@
     <header>
         <h1>Guess The Artist</h1>
     </header>
-    <div class="content">
+    <div class="content" ng-hide="mainCtrl.gameover">
         <section class="left">
             <h2 ng-bind="'Round ' + mainCtrl.round"></h2>
             <album model="mainCtrl.album"></album>
@@ -17,5 +17,6 @@
     </div>
     <footer ng-show="mainCtrl.gameover">
         <span ng-bind="'Your Total Score: ' + mainCtrl.totalScore"></span>
+        <button ng-click="mainCtrl.start()">Restart Game</button>
     </footer>
 </div>

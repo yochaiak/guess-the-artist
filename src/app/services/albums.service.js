@@ -16,7 +16,7 @@ export default class AlbumsService {
             term: artistName,
             limit: 15,
             entity: 'album'
-        }).then((result) => deferred.resolve(result.data.results), (result) => console.log(result))
+        }).then((result) => deferred.resolve(result.data.results), (result) => console.error(result))
 
         return deferred.promise;
     }

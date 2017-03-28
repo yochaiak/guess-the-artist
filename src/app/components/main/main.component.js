@@ -14,7 +14,7 @@ class MainController {
 
     start() {
         this.randomArtist = _.sampleSize(this.ARTISTS, 1)[0];
-        console.log(this.randomArtist);
+        this.gameover = false;
 
         this.AlbumsService.getByArtistName(this.randomArtist).then((albums) => {
             this.albums = albums;
@@ -48,7 +48,7 @@ class MainController {
             this.start();
         } else {
             if (this.userAttempts === 3) {
-                this.start();
+                this.gameover = true;
             } else if (this.userAttempts < 3) {
                 this.album = this.randomAlbums.pop();
                 this.roundScore -= 2;
